@@ -25,7 +25,7 @@
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		CPU_Pipelined_assignment_defaults.qdf
+#		CPU_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY CPU_Pipelined
+set_global_assignment -name TOP_LEVEL_ENTITY CPU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:28:44  OCTOBER 20, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -67,7 +67,7 @@ set_global_assignment -name BDF_FILE StallDetection/StallDetection.bdf
 set_global_assignment -name BDF_FILE Checks/NONZERO.bdf
 set_global_assignment -name BDF_FILE Checks/EQ_5.bdf
 set_global_assignment -name BDF_FILE Checks/REGCheck.bdf
-set_global_assignment -name BDF_FILE CPU_Pipelined.bdf
+set_global_assignment -name BDF_FILE CPU.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

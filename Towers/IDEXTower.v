@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Wed Aug 16 14:46:12 2023"
+// CREATED		"Tue Aug 19 15:59:25 2025"
 
 module IDEXTower(
 	EXstall,
@@ -52,14 +52,14 @@ wire	NOTEXstall;
 
 
 
-Flopr_32	b2v_A_REG(
+Register_32	b2v_A_REG(
 	.reset(reset),
 	.clk(clk),
 	.D(A),
 	.Q(EXA));
 
 
-Flopr_32	b2v_B_REG(
+Register_32	b2v_B_REG(
 	.reset(reset),
 	.clk(clk),
 	.D(B),
@@ -82,7 +82,7 @@ MUX2_32	b2v_EXBMUX(
 assign	NOTEXstall =  ~EXstall;
 
 
-Flopenr_32	b2v_IR_REG(
+RegisterE_32	b2v_IR_REG(
 	.reset(reset),
 	.clk(clk),
 	.E(NOTEXstall),

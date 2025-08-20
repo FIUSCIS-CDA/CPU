@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Wed Aug 16 14:46:35 2023"
+// CREATED		"Tue Aug 19 20:04:26 2025"
 
 module EXMEMTower(
 	reset,
@@ -48,14 +48,14 @@ wire	SYNTHESIZED_WIRE_3;
 
 
 
-Flopr_32	b2v_ALUOut_REG(
+Register_32	b2v_ALUOut_REG(
 	.reset(reset),
 	.clk(clk),
 	.D(SYNTHESIZED_WIRE_0),
 	.Q(MEMALUOut));
 
 
-Flopr_32	b2v_B_REG(
+Register_32	b2v_B_REG(
 	.reset(reset),
 	.clk(clk),
 	.D(EXB),
@@ -81,14 +81,14 @@ MUX2_32	b2v_inst4(
 	.Y(SYNTHESIZED_WIRE_0));
 
 
-Flopr_32	b2v_IR_REG(
+Register_32	b2v_IR_REG(
 	.reset(reset),
 	.clk(clk),
 	.D(EXInstruction),
 	.Q(MEMIR));
 
 
-Flopenr_32	b2v_LO(
+RegisterE_32	b2v_LO(
 	.reset(reset),
 	.clk(clk),
 	.E(SYNTHESIZED_WIRE_3),

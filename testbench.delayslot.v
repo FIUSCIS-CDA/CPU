@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////////
-// Testbench for Component: CPU_Pipelined (CLK=100)
+// Testbench for Component: CPU (CLK=100)
 // Package: FIUSCIS-CDA
 // Course: CDA3102 (Computer Architecture), Florida International University
 // Developer: Trevor Cickovski
 // Extended By: CDA3102 students
-// License: MIT, (C) 2020-2022 All Rights Reserved
+// License: MIT, (C) 2020-2022, 2025 All Rights Reserved
 ///////////////////////////////////////////////////////////////////////////////////
 
 
@@ -36,7 +36,7 @@ localparam TERMINALPC=92;
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
    // Strategy - Hardcoded to 10 for Delay Slot
-   CPU_Pipelined myCPU(.reset(rst), .clk(clk), .Strategy(2'b10), .EXIR(EXIR), 
+   CPU myCPU(.reset(rst), .clk(clk), .Strategy(2'b10), .EXIR(EXIR), 
                        .IDIR(IDIR), .IFIR(IFIR), .MEMIR(MEMIR), .PC(PC), .WBIR(WBIR));  
    
    initial begin

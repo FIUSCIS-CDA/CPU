@@ -15,42 +15,71 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Tue Aug 19 22:32:36 2025"
+// CREATED		"Tue Aug 19 22:38:10 2025"
 
-module MEMWBTower(
-	reset,
+module MEMM(
 	clk,
+	Instruction,
+	MEMALUOut,
+	MEMB,
+	MEMForward,
 	MEMIR,
-	MEMValue,
-	WBIR,
-	WBValue
+	MEMop,
+	MEMrn,
+	MEMrp,
+	MEMValue
 );
 
 
-input wire	reset;
 input wire	clk;
-input wire	[31:0] MEMIR;
-input wire	[31:0] MEMValue;
-output wire	[31:0] WBIR;
-output wire	[31:0] WBValue;
+input wire	[31:0] Instruction;
+input wire	[31:0] MEMALUOut;
+input wire	[31:0] MEMB;
+output wire	[31:0] MEMForward;
+output wire	[31:0] MEMIR;
+output wire	[31:26] MEMop;
+output wire	[20:16] MEMrn;
+output wire	[15:11] MEMrp;
+output wire	[31:0] MEMValue;
+
+wire	[31:0] IR;
+wire	LWinstruction;
+wire	[31:0] ReadData;
+wire	SWinstruction;
+
+assign	MEMForward = MEMALUOut;
 
 
 
 
+LW	b2v_isLW(
+	.Op(IR[31:26]),
+	.Y(LWinstruction));
 
 
-Register_32	b2v_IR_REG(
-	.reset(reset),
+SW	b2v_isSW(
+	.Op(IR[31:26]),
+	.Y(SWinstruction));
+
+
+MUX2_32	b2v_MUXMEMValue(
+	.S(LWinstruction),
+	.A(MEMALUOut),
+	.B(ReadData),
+	.Y(MEMValue));
+
+
+RAM	b2v_MYDM(
 	.clk(clk),
-	.D(MEMIR),
-	.Q(WBIR));
+	.we(SWinstruction),
+	.a(MEMALUOut),
+	.wd(MEMB),
+	.rd(ReadData));
 
-
-Register_32	b2v_Value_REG(
-	.reset(reset),
-	.clk(clk),
-	.D(MEMValue),
-	.Q(WBValue));
-
+assign	MEMIR = IR;
+assign	IR = Instruction;
+assign	MEMop[31:26] = IR[31:26];
+assign	MEMrn[20:16] = IR[20:16];
+assign	MEMrp[15:11] = IR[15:11];
 
 endmodule

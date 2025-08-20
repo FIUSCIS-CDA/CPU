@@ -1,5 +1,5 @@
 #### MODULE NAME
-       CPU_PipeLined
+       CPU
 
 #### DEPENDENCIES
        SameBit,  MUX2,  Flopr_32, Flopenr_32, Flopr, DSwitch, MUX2_5, MUX2_32,

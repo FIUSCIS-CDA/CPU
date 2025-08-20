@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Wed Aug 16 14:45:30 2023"
+// CREATED		"Tue Aug 19 15:50:24 2025"
 
 module IFIDTower(
 	reset,
@@ -32,18 +32,18 @@ input wire	stall;
 input wire	[31:0] IFIR;
 output wire	[31:0] IDIR;
 
-wire	NOTstall;
+wire	SYNTHESIZED_WIRE_0;
 
 
 
 
-assign	NOTstall =  ~stall;
+assign	SYNTHESIZED_WIRE_0 =  ~stall;
 
 
-Flopenr_32	b2v_IR_REG(
+RegisterE_32	b2v_IR_REG(
 	.reset(reset),
 	.clk(clk),
-	.E(NOTstall),
+	.E(SYNTHESIZED_WIRE_0),
 	.D(IFIR),
 	.Q(IDIR));
 

@@ -127,7 +127,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (symbol
 	(rect 320 144 472 272)
-	(text "Flopenr_32" (rect 5 0 73 19)(font "Intel Clear" (color 0 0 0)(font_size 8)))
+	(text "RegisterE_32" (rect 5 0 84 19)(font "Intel Clear" (color 0 0 0)(font_size 8)))
 	(text "IR_REG" (rect 8 107 43 124)(font "Intel Clear" (color 0 0 0)))
 	(port
 		(pt 0 32)
@@ -165,9 +165,9 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 152 32)(pt 136 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 136 112)(color 0 0 0))
+		(rectangle (rect 16 16 136 112))
 	)
-	(fill (color 85 255 0))
+	(fill (color 85 170 0))
 )
 (connector
 	(pt 248 56)

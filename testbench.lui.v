@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////////
-// Testbench for Component: CPU_Pipelined (CLK=100)
+// Testbench for Component: CPU (CLK=100)
 // Package: FIUSCIS-CDA
 // Course: CDA3102 (Computer Architecture), Florida International University
 // Developer: Trevor Cickovski
 // Extended By: CDA3102 students
-// License: MIT, (C) 2020-2023 All Rights Reserved
+// License: MIT, (C) 2020-2023, 2025 All Rights Reserved
 ///////////////////////////////////////////////////////////////////////////////////
 
 
@@ -44,7 +44,7 @@ localparam BRANCH_PRED=2'b00;
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
  
-CPU_Pipelined myCPU(.clk(clk), .reset(rst), .Strategy(BRANCH_PRED), .EXIR(EXIR), 
+CPU myCPU(.clk(clk), .reset(rst), .Strategy(BRANCH_PRED), .EXIR(EXIR), 
                        .IDIR(IDIR), .IFIR(IFIR), .MEMIR(MEMIR), .PC(PC), .WBIR(WBIR)); 
    
    initial begin
