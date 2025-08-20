@@ -1,0 +1,157 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 19:28:44  October 20, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		CPU_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY CPU
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:28:44  OCTOBER 20, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "Precision Synthesis"
+set_global_assignment -name EDA_LMF_FILE mentor.lmf -section_id eda_design_synthesis
+set_global_assignment -name EDA_INPUT_DATA_FORMAT VQM -section_id eda_design_synthesis
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name BDF_FILE StallDetection/StallDetection.bdf
+set_global_assignment -name BDF_FILE CPU.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardDetection.bdf
+
+
+
+
+
+
+
+
+set_global_assignment -name BDF_FILE ../Constants/Zero_32/Zero_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/EQ/EQ_32/EQ_32.bdf
+set_global_assignment -name BDF_FILE Instructions/ITYPE/ITYPE.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/NONZERO_5/NONZERO_5.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/EQ/EQ_5/EQ_5.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/EQ/EQ_NONZERO_5/EQ_NONZERO_5.bdf
+set_global_assignment -name BDF_FILE ../Memory/Registers/Unenabled/Register_32/Register_32.bdf
+set_global_assignment -name BDF_FILE ../Memory/Registers/Unenabled/Register/Register.bdf
+set_global_assignment -name BDF_FILE ../Memory/Registers/Unenabled/DSwitch/DSwitch.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX2_32/MUX2_32.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX2_5/MUX2_5.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX2/MUX2.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX3_32/MUX3_32.bdf
+set_global_assignment -name BDF_FILE ../Miscellaneous/SameBit/SameBit.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX3/MUX3.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/SESL16_32/SESL16_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/SESL16_32/SE16_32/SE16_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/SESL16_32/SL2_32/SL2_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/ALU_32/ALU_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/OneBitAdder/OneBitAdder/OneBitAdder.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX4/MUX4.bdf
+set_global_assignment -name BDF_FILE ../Miscellaneous/SPLICE_PCJ/SPLICE_PCJ.bdf
+set_global_assignment -name VERILOG_FILE ../Memory/ROM/ROM.v
+set_global_assignment -name BDF_FILE ../Arithmetic/INC4_32/INC4_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/Adder_32/Adder_32.bdf
+set_global_assignment -name BDF_FILE ../Memory/Registers/RF/RF.bdf
+set_global_assignment -name BDF_FILE ../Memory/Registers/Enabled/RegisterE_32/RegisterE_32.bdf
+set_global_assignment -name BDF_FILE ../Memory/Registers/Enabled/RegisterE/RegisterE.bdf
+set_global_assignment -name BDF_FILE ../Memory/Registers/Enabled/DESwitch/DESwitch.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX32_32/MUX32_32.bdf
+set_global_assignment -name BDF_FILE ../Miscellaneous/Decoder_32/Decoder_32.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX32/MUX32.bdf
+set_global_assignment -name VERILOG_FILE ../Memory/RAM/RAM.v
+set_global_assignment -name BDF_FILE ../Arithmetic/OverflowDetection/OverflowDetection.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX4_32/MUX4_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/Multiplier_32/Multiplier_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/OneBitAdder/OneBitAdderHalf/OneBitAdderHalf.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/SLL_32/SLL_32.bdf
+set_global_assignment -name BDF_FILE ../Constants/Sixteen_5/Sixteen_5.bdf
+set_global_assignment -name BDF_FILE Instructions/ADD/ADD.bdf
+set_global_assignment -name BDF_FILE Instructions/ADDI/ADDI.bdf
+set_global_assignment -name BDF_FILE Instructions/ANDD/ANDD.bdf
+set_global_assignment -name BDF_FILE Instructions/ANDI/ANDI.bdf
+set_global_assignment -name BDF_FILE Instructions/BEQ/BEQ.bdf
+set_global_assignment -name BDF_FILE Instructions/BNE/BNE.bdf
+set_global_assignment -name BDF_FILE Instructions/BRANCH/BRANCH.bdf
+set_global_assignment -name BDF_FILE Instructions/J/J.bdf
+set_global_assignment -name BDF_FILE Instructions/LUI/LUI.bdf
+set_global_assignment -name BDF_FILE Instructions/LW/LW.bdf
+set_global_assignment -name BDF_FILE Instructions/MFLO/MFLO.bdf
+set_global_assignment -name BDF_FILE Instructions/MULT/MULT.bdf
+set_global_assignment -name BDF_FILE Instructions/ORI/ORI.bdf
+set_global_assignment -name BDF_FILE Instructions/ORR/ORR.bdf
+set_global_assignment -name BDF_FILE Instructions/RTYPE/RTYPE.bdf
+set_global_assignment -name BDF_FILE Instructions/SLL/SLL.bdf
+set_global_assignment -name BDF_FILE Instructions/SLT/SLT.bdf
+set_global_assignment -name BDF_FILE Instructions/SLTI/SLTI.bdf
+set_global_assignment -name BDF_FILE Instructions/SUB/SUB.bdf
+set_global_assignment -name BDF_FILE Instructions/SW/SW.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/ZE5_32/ZE5_32.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name BDF_FILE ALUCtl/ALUCtl.bdf
+set_global_assignment -name BDF_FILE Branch_Prediction/Branch_Prediction.bdf
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardAfromMEMtoEX/ForwardAfromMEMtoEX.bdf
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardAfromMEMtoID/ForwardAfromMEMtoID.bdf
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardAfromWBtoEX/ForwardAfromWBtoEX.bdf
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardAfromWBtoID/ForwardAfromWBtoID.bdf
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardBfromMEMtoEX/ForwardBfromMEMtoEX.bdf
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardBfromMEMtoID/ForwardBfromMEMtoID.bdf
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardBfromWBtoEX/ForwardBfromWBtoEX.bdf
+set_global_assignment -name BDF_FILE ForwardDetection/ForwardBfromWBtoID/ForwardBfromWBtoID.bdf
+set_global_assignment -name BDF_FILE Stages/IFF/IFF.bdf
+set_global_assignment -name BDF_FILE Stages/ID/ID.bdf
+set_global_assignment -name BDF_FILE Stages/EX/EX.bdf
+set_global_assignment -name BDF_FILE Stages/MEMM/MEMM.bdf
+set_global_assignment -name BDF_FILE Stages/WB/WB.bdf
+set_global_assignment -name BDF_FILE Towers/EXMEMTower/EXMEMTower.bdf
+set_global_assignment -name BDF_FILE Towers/IDEXTower/IDEXTower.bdf
+set_global_assignment -name BDF_FILE Towers/IFIDTower/IFIDTower.bdf
+set_global_assignment -name BDF_FILE Towers/MEMWBTower/MEMWBTower.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/AND_32/AND_32.bdf
+set_global_assignment -name BDF_FILE ../Miscellaneous/Encoder_32/Encoder_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/Less_32/Less_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/Log2_32/Log2_32.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX8/MUX8.bdf
+set_global_assignment -name BDF_FILE ../MUX/MUX8_32/MUX8_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/NOT_32/NOT_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/OR_32/OR_32.bdf
+set_global_assignment -name BDF_FILE ../Arithmetic/Subtractor_32/Subtractor_32.bdf
