@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Tue Aug 19 22:26:33 2025"
+// CREATED		"Tue Oct 14 11:30:36 2025"
 
 module ForwardAfromWBtoID(
 	IDrm,
@@ -57,23 +57,23 @@ BRANCH	b2v_inst10(
 	.Op(WBop),
 	.Y(SYNTHESIZED_WIRE_0));
 
-
-EQ_NONZERO_5	b2v_inst11(
-	.reg1(IDrm),
-	.reg2(WBrp),
-	.Y(WBrpisIDrm));
-
-
-EQ_NONZERO_5	b2v_inst12(
-	.reg1(IDrm),
-	.reg2(WBrn),
-	.Y(WBrnisIDrm));
-
 assign	SYNTHESIZED_WIRE_2 = SYNTHESIZED_WIRE_0 | SYNTHESIZED_WIRE_1;
 
 assign	SYNTHESIZED_WIRE_4 =  ~SYNTHESIZED_WIRE_2;
 
 assign	SYNTHESIZED_WIRE_5 = SYNTHESIZED_WIRE_3 & SYNTHESIZED_WIRE_4;
+
+
+EQ_NONZERO_5	b2v_inst2(
+	.A(IDrm),
+	.B(WBrp),
+	.Y(WBrpisIDrm));
+
+
+EQ_NONZERO_5	b2v_inst3(
+	.A(IDrm),
+	.B(WBrn),
+	.Y(WBrnisIDrm));
 
 assign	WBopisRTYPE_and_WBrpisIDrm = WBopisRTYPE & WBrpisIDrm;
 
