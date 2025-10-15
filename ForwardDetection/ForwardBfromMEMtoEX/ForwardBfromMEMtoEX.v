@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Tue Aug 19 21:29:52 2025"
+// CREATED		"Tue Oct 14 11:30:42 2025"
 
 module ForwardBfromMEMtoEX(
 	EXrn,
@@ -60,18 +60,6 @@ BRANCH	b2v_inst10(
 	.Op(MEMop),
 	.Y(SYNTHESIZED_WIRE_3));
 
-
-EQ_NONZERO_5	b2v_inst11(
-	.reg1(EXrn),
-	.reg2(MEMrp),
-	.Y(MEMrpisEXrn));
-
-
-EQ_NONZERO_5	b2v_inst12(
-	.reg1(EXrn),
-	.reg2(MEMrn),
-	.Y(MEMrnisEXrn));
-
 assign	SYNTHESIZED_WIRE_2 =  ~SYNTHESIZED_WIRE_0;
 
 assign	SYNTHESIZED_WIRE_6 = SYNTHESIZED_WIRE_1 & SYNTHESIZED_WIRE_2;
@@ -86,6 +74,18 @@ assign	MEMopisADDI_and_MEMrnisEXrn = SYNTHESIZED_WIRE_6 & MEMrnisEXrn;
 LW	b2v_inst5(
 	.Op(MEMop),
 	.Y(SYNTHESIZED_WIRE_4));
+
+
+EQ_NONZERO_5	b2v_inst6(
+	.A(EXrn),
+	.B(MEMrp),
+	.Y(MEMrpisEXrn));
+
+
+EQ_NONZERO_5	b2v_inst7(
+	.A(EXrn),
+	.B(MEMrn),
+	.Y(MEMrnisEXrn));
 
 
 SW	b2v_inst9(
