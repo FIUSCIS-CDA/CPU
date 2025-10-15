@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Tue Aug 19 21:17:37 2025"
+// CREATED		"Tue Oct 14 11:31:13 2025"
 
 module ForwardBfromMEMtoID(
 	IDrn,
@@ -60,12 +60,6 @@ BRANCH	b2v_inst10(
 	.Op(MEMop),
 	.Y(SYNTHESIZED_WIRE_0));
 
-
-EQ_NONZERO_5	b2v_inst11(
-	.reg1(IDrn),
-	.reg2(MEMrn),
-	.Y(MEMrnisIDrn));
-
 assign	SYNTHESIZED_WIRE_5 =  ~SYNTHESIZED_WIRE_3;
 
 assign	SYNTHESIZED_WIRE_6 = SYNTHESIZED_WIRE_4 & SYNTHESIZED_WIRE_5;
@@ -82,10 +76,16 @@ LW	b2v_inst4(
 	.Y(SYNTHESIZED_WIRE_1));
 
 
-EQ_NONZERO_5	b2v_inst8(
-	.reg1(IDrn),
-	.reg2(MEMrp),
+EQ_NONZERO_5	b2v_inst5(
+	.A(IDrn),
+	.B(MEMrp),
 	.Y(MEMrpisIDrn));
+
+
+EQ_NONZERO_5	b2v_inst6(
+	.A(IDrn),
+	.B(MEMrn),
+	.Y(MEMrnisIDrn));
 
 
 SW	b2v_inst9(
