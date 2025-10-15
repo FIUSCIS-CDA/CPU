@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Tue Aug 19 22:26:15 2025"
+// CREATED		"Tue Oct 14 11:30:23 2025"
 
 module ForwardAfromMEMtoID(
 	IDrm,
@@ -56,12 +56,6 @@ ITYPE	b2v_inst1(
 assign	Y = SYNTHESIZED_WIRE_0 | MEMopisRTYPE_and_MEMrpisIDrm;
 
 
-EQ_NONZERO_5	b2v_inst11(
-	.reg1(IDrm),
-	.reg2(MEMrp),
-	.Y(MEMrpisIDrm));
-
-
 BRANCH	b2v_inst12(
 	.Op(MEMop),
 	.Y(SYNTHESIZED_WIRE_4));
@@ -70,15 +64,15 @@ assign	SYNTHESIZED_WIRE_3 =  ~SYNTHESIZED_WIRE_1;
 
 assign	SYNTHESIZED_WIRE_7 = SYNTHESIZED_WIRE_2 & SYNTHESIZED_WIRE_3;
 
-
-EQ_NONZERO_5	b2v_inst15(
-	.reg1(IDrm),
-	.reg2(MEMrn),
-	.Y(MEMrnisIDrm));
-
 assign	SYNTHESIZED_WIRE_1 = SYNTHESIZED_WIRE_4 | SYNTHESIZED_WIRE_5 | SYNTHESIZED_WIRE_6;
 
 assign	MEMopisRTYPE_and_MEMrpisIDrm = MEMopisRTYPE & MEMrpisIDrm;
+
+
+EQ_NONZERO_5	b2v_inst4(
+	.A(IDrm),
+	.B(MEMrp),
+	.Y(MEMrpisIDrm));
 
 assign	SYNTHESIZED_WIRE_0 = SYNTHESIZED_WIRE_7 & MEMrnisIDrm;
 
@@ -86,6 +80,12 @@ assign	SYNTHESIZED_WIRE_0 = SYNTHESIZED_WIRE_7 & MEMrnisIDrm;
 LW	b2v_inst6(
 	.Op(MEMop),
 	.Y(SYNTHESIZED_WIRE_5));
+
+
+EQ_NONZERO_5	b2v_inst7(
+	.A(IDrm),
+	.B(MEMrn),
+	.Y(MEMrnisIDrm));
 
 
 SW	b2v_inst9(
