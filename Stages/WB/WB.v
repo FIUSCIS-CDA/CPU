@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Tue Aug 19 20:12:54 2025"
+// CREATED		"Tue Oct 14 11:39:13 2025"
 
 module WB(
 	Instruction,
@@ -77,8 +77,8 @@ assign	SYNTHESIZED_WIRE_3 =  ~SYNTHESIZED_WIRE_2;
 assign	WBopisLWADDIorSLTI = SYNTHESIZED_WIRE_3 & SYNTHESIZED_WIRE_4;
 
 
-NONZERO_5	b2v_inst8(
-	.Register(WBIR[15:11]),
+NONZERO_5	b2v_inst2(
+	.A(WBIR[15:11]),
 	.Y(WBrdisNOT0));
 
 
