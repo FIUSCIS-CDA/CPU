@@ -70,7 +70,7 @@ CPU myCPU(.clk(clk), .reset(rst), .Strategy(BRANCH_PRED), .EXIR(EXIR),
       myCPU.b2v_IFStage.b2v_MYIM.memory[17] = 'b00010001100000000000000000000010; // 	       beq $t4, $zero, doneif           68        
       myCPU.b2v_IFStage.b2v_MYIM.memory[18] = 'b10101101011101010000000000000000; // 	       sw $s5, 0($t3)                   72       
       myCPU.b2v_IFStage.b2v_MYIM.memory[19] = 'b10101101011101000000000000000100; // 	       sw $s4, 4($t3)                   76       
-      myCPU.b2v_IFStage.b2v_MYIM.memory[20] = 'b00100010011100110000000000000001; // doneif: addi $s3, $s2, 1                 80	
+      myCPU.b2v_IFStage.b2v_MYIM.memory[20] = 'b00100010011100110000000000000001; // doneif: addi $s3, $s3, 1                 80	
       myCPU.b2v_IFStage.b2v_MYIM.memory[21] = 'b00001000000000000000000000001001; // 	       j loop2  			84
       myCPU.b2v_IFStage.b2v_MYIM.memory[22] = 'b00100010010100100000000000000001; //doneloop2:addi $s2, $s2, 1		88
       myCPU.b2v_IFStage.b2v_MYIM.memory[23] = 'b00001000000000000000000000000101; // 	       j loop1 (3)			92
